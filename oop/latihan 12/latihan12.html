@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, world!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <center>
+        <div class="container mt-5">
+            <form action="hasil.php" method="post">
+                <div class="card mb-4  shadow-lg mb-5 bg-body rounded" align="left" style="width: 80rem;">
+                    <div class="card-body">
+                        <p class="card-title fs-5" align="left">Informasi</p>
+                        <p>Apabila Anda telah melakukan pendaftaran, silahkan klik tombol "Cek Status Pendaftaran".</p>
+                        <a href="#" class="btn btn-primary me-2">Cek Status Pendaftaran</a>
+                        <a href="#" class="btn btn-warning text-white ml-2">Kembali ke Home</a>
+                        <a href="#" class="btn btn-danger ml-2">Situs Resmi SMK ASSALAAM</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow-lg mb-5 bg-body rounded" style="width: 80rem;">
+                            <div class="card-body">
+                                <p class="card-title fs-5" align="left">Data Diri Calon Pendaftar (Form yang bertanda * wajib di isi)</p>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Jurusan *</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-1">
+                                            <select class="form-select" aria-label="Default select example" name="jurusan">
+                                                <option value="#" selected disabled>Pilih Jurusan</option>
+                                                <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+                                                <option value="Teknik Kendaraan Ringan Otomotif">Teknik Kendaraan Ringan Otomotif</option>
+                                                <option value="Teknik Bisnis Sepeda Motor">Teknik Bisnis Sepeda Motor</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Nama Lengkap *</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-1">
+                                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nama Lengkap" name="namacalon" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Jenis Kelamin *</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="jk" id="flexRadioDefault1" checked value="Laki-Laki">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                              Laki-Laki
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="jk" id="flexRadioDefault2" value="Perempuan">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                              Perempuan
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Tempat Lahir *</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-1">
+                                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Tempat Lahir" name="tmptlahir" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Tanggal Lahir *</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-1">
+                                            <input type="date" class="form-control" id="exampleInputPassword1" name="tgllahir" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Nomor HP siswa yang bisa dihubungi *</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-1">
+                                            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="HP(628+)" name="nocalon" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Email (Setelah melakukan pendaftaran, anda akan menerima softcopy form pendaftaran yang kami kirimkan ke alamat email anda)</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-1">
+                                            <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email" name="email" required>   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow-lg mb-5 bg-body rounded" style="width: 80rem;">
+                            <div class="card-body">
+                                <p class="card-title fs-5" align="left">Alamat Calon Pendaftar</p>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Provinsi *</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-1">
+                                            <select class="form-select" aria-label="Default select example" name="provinsi">
+                                                <option value="#" selected disabled>Pilih Provinsi</option>
+                                                <option value="Aceh">Aceh</option>
+                                                <option value="Sumatera Utara">Sumatera Utara</option>
+                                                <option value="Sumatera Barat">Sumatera Barat</option>
+                                                <option value="Riau">Riau</option>
+                                                <option value="Kepulauan Riau">Kepulauan Riau</option>
+                                                <option value="Jawa Barat">Jawa Barat</option>
+                                                <option value="Jawa Tengah">Jawa Tengah</option>
+                                                <option value="Jawa Timur">Jawa Timur</option>
+                                                <option value="Bali">Bali</option>
+                                                <option value="Papua">Papua</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Kab / Kota: *</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-1">
+                                            <select class="form-select" aria-label="Default select example" name="kokab">
+                                                <option value="-">Pilih Kota</option>
+                                                <option value="Bandung">Bandung</option>
+                                                <option value="Bandung Barat">Bandung Barat</option>
+                                                <option value="Bekasi">Bekasi</option>
+                                                <option value="Bogor">Bogor</option>
+                                                <option value="Ciamis">Ciamis</option>
+                                                <option value="Cianjur">Cianjur</option>
+                                                <option value="Cimahi">Cimahi</option>
+                                                <option value="Cirebon">Cirebon</option>
+                                                <option value="Garut">Garut</option>
+                                                <option value="Indramayu">Indramayu</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Kecamatan *</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-1">
+                                            <select class="form-select" aria-label="Default select example" name="kec">
+                                                <option value="-">Pilih Kecamatan</option>
+                                                <option value="Andir">Andir</option>
+                                                <option value="Antapani">Antapani</option>
+                                                <option value="Arcamanik">Arcamanik</option>
+                                                <option value="Astanaanyar">Astanaanyar</option>
+                                                <option value="Babakan Ciparay">Babakan Ciparay</option>
+                                                <option value="Bandung Kidul">Bandung Kidul</option>
+                                                <option value="Bandung Kulon">Bandung Kulon</option>
+                                                <option value="Bandung Wetan">Bandung Wetan</option>
+                                                <option value="Batununggal">Batununggal</option>
+                                                <option value="Bojongloa Kaler">Bojongloa Kaler</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Desa / Kelurahan *</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-1">
+                                            <select class="form-select" aria-label="Default select example" name="delur">
+                                                <option value="-">Pilih Desa/Kelurahan</option>
+                                                 <option value="Ciburial">Ciburial</option>
+                                                 <option value="Cileunyi">Cileunyi</option>
+                                                 <option value="Ciparay">Ciparay</option>
+                                                 <option value="Margaluyu">Margaluyu</option>
+                                                 <option value="Mekarsari">Mekarsari</option>
+                                                 <option value="Cangkuang">Cangkuang</option>
+                                                 <option value="Pangalengan">Pangalengan</option>
+                                                 <option value="Rancamanyar">Rancamanyar</option>
+                                                 <option value="Sukamaju">Sukamaju</option>
+                                                 <option value="Sukasari">Sukasari</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Alamat *</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-4">
+                                            <textarea class="form-control" aria-label="With textarea" placeholder="Tidak perlu lagi menulis provinsi, kota, kecamatan & kelurahan" name="alamatcalon"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Kode Pos</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-1">
+                                            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Kode Pos" name="kodepos" required>   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow-lg mb-5 bg-body rounded" style="width: 80rem;">
+                            <div class="card-body">
+                                <p class="card-title fs-5" align="left">Data Asal Sekolah</p>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Nama Asal Sekolah *</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-1">
+                                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nama Asal Sekolah" name="namaasalsek" required>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-2">
+                                        <p class="text-muted" align="left">Alamat Sekolah *</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-4">
+                                            <textarea class="form-control" aria-label="With textarea" placeholder="Alamat Lengkap Asal Sekolah" name="alamatasalsek"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow-lg mb-5 bg-body rounded" style="width: 80rem;">
+                            <div class="card-body">
+                                <p class="card-title fs-5" align="left">Data Orang Tua</p>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Nama Lengkap Ayah / Ibu / Wali*</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="row mb-1">
+                                            <div class="col-2">
+                                                <select class="form-select" aria-label="Default select example" name="ortu">
+                                                    <option value="Ayah">Ayah</option>
+                                                    <option value="Ibu">Ibu</option>
+                                                    <option value="Wali">Wali</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nama Lengkap" name="namalengkaportu" required>   
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Pekerjaan Ayah / Ibu / Wali *</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-1">
+                                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Pekerjaan" name="pekerjaanortu" required>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Nomor HP yang bisa dihubungi *</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-1">
+                                            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Nomor HP" name="noortu" required>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <p class="text-muted" align="left">Alamat Lengkap *</p>
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-1">
+                                            <textarea class="form-control" aria-label="With textarea" placeholder="Alamat Lengkap" rows="4" name="alamatortu"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                    </div>
+                                    <div class="col" align="left">
+                                        <div class="mb-1">
+                                            <button type="submit" class="btn btn-primary" name="save">Simpan dan Daftar</button>
+                                            <button type="reset" class="btn btn-outline-warning">Reset</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </center>
+</body>
+</html>
